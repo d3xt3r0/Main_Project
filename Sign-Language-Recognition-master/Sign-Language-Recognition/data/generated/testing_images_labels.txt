@@ -1,0 +1,3 @@
+../data/images/test/K/003.jpg	K
+
+C:/xampp/htdocs/file_upload_api/files/003.jpg      K 
