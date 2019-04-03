@@ -29,12 +29,12 @@ def main():
         frame_flattened = frame.flatten()
         classifier_model = joblib.load(model_serialized_path)
         predicted_labels = classifier_model.predict(frame_flattened.reshape(1,-1))
-        predicted_label = predicted_labels[0]
+        predicted_label = predicted_labels[1]
         print("Predicted labelx={}".format(predicted_label))
     except Exception:
         exception_traceback = traceback.format_exc()
         print("Error while applying image transformation on image path '{}' with the following exception trace:\n{}".format(image_path, exception_traceback))
-    os.remove(image_path)
+    #os.remove(image_path)
     cv2.destroyAllWindows()
     print "The program completed successfully !!"
 
